@@ -1,0 +1,28 @@
+Complexity Analysis:
+Time Complexity of Insertion Sort
+ Best case: O(n), If the list is already sorted.
+ Average case: O(n2), If the list is randomly ordered
+ Worst case: O(n2), If the list is in reverse order
+
+Space Complexity of Insertion Sort
+ Auxiliary Space: O(1), Insertion sort requires O(1) additional space, making it a
+space-efficient sorting algorithm
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+	int a,b,c;
+    int num[]={60,20,50,40,30,10};
+    int n=sizeof(num)/sizeof(num[0]);
+    for(int i=0;i<n-1;i++){
+    	for(int j=0;j<n-i-1;j++){
+    		if(num[j]>num[j+1]){
+    			swap(num[j],num[j+1]);
+    		}
+    	}
+    }
+    for(int i=0;i<n;i++){ cout<<num[i]<<" "; }
+	return 0;
+}
